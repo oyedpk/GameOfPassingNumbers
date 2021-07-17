@@ -1,3 +1,7 @@
+![alt text](https://github.com/oyedpk/GameOfPassingNumbers/blob/master/design.png?raw=true)
+
+
+
 Installing Kafka and ZooKeeper
 Step 1: Download Kafka
 tar -xzf kafka_2.12-2.5.0.tgz
