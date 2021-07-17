@@ -1,0 +1,17 @@
+Installing Kafka and ZooKeeper
+Step 1: Download Kafka
+tar -xzf kafka_2.12-2.5.0.tgz
+cd kafka_2.12-2.5.0
+Step 2: Starting The Server
+bin/zookeeper-server-start.sh config/zookeeper.properties
+on Windows platforms use bin\windows\instead of bin, and change the script extension to .bat.
+
+bin/kafka-server-start.sh config/server.properties
+Windows users should again use bin\windows\ directory to run the server.
+
+
+If the Kafka server runs without any error as well, we are ready to create a Spring Boot project.
+
+Start Both players->
+java -jar -Dspring.profiles.active=player1 demo-0.0.1-SNAPSHOT.jar
+java -jar -Dspring.profiles.active=player2 demo-0.0.1-SNAPSHOT.jar
