@@ -1,8 +1,7 @@
 package com.game.service;
 
-import com.game.kafka.ConsumerService;
 import com.game.kafka.ProducerService;
-import com.game.util.GameUtil;
+import com.game.entity.Player;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,12 +18,12 @@ public class GameService {
     Logger logger = LoggerFactory.getLogger(GameService.class);
 
     public synchronized String startGame(Long number) {
-        if(GameUtil.STATUS.equals("IDLE")) {
+        if(Player.STATUS.equals("IDLE")) {
             if(number<=0) {
                 logger.info("*****************Invaild Input, Pass whole number [ {} ]", number);
                 return "Invaild Input, Pass whole number";
             }
-            GameUtil.STATUS="IN_PROGRESS";
+            Player.STATUS="IN_PROGRESS";
             try {
                 messageProducer.sendMessage(number);
             } catch (ExecutionException e) {

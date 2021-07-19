@@ -1,4 +1,4 @@
-package com.game.util;
+package com.game.entity;
 
 import com.game.kafka.ProducerService;
 import org.slf4j.Logger;
@@ -10,9 +10,9 @@ import org.springframework.stereotype.Component;
 import java.util.concurrent.ExecutionException;
 
 @Component
-public class GameUtil {
+public class Player {
 
-    Logger logger = LoggerFactory.getLogger(GameUtil.class);
+    Logger logger = LoggerFactory.getLogger(Player.class);
 
     public static transient String STATUS="IDLE";
 
@@ -26,7 +26,7 @@ public class GameUtil {
         if(a==-1) {
             logger.info("*****************Player [ {} ] LOST", playerName);
             STATUS="IDLE";
-        } else if(a==3 || a==2 || a==4 || a==1) {
+        } else if(a>=1 && a<=4) {
             logger.info("*****************Player [ {} ] WON", playerName);
             messageProducer.sendMessage((long) -1);
             STATUS="IDLE";
