@@ -60,3 +60,4 @@ http://localhost:9000/start                     -> to start with some random num
 
 ## Note
 When the other player is not available, game will resume after the player is available again
+Result will be displayed in Logs for both player1 and player2
