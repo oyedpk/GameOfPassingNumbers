@@ -8,23 +8,10 @@ Game with two independent units, the players communicating with each other using
 
 ## Installation Pre-requisite (Kafka and ZooKeeper)
 
-Step 1: Download Kafka
+Step 1: Run docker compose
 ```bash
-tar -xzf kafka_2.12-2.5.0.tgz
-cd kafka_2.12-2.5.0
+docker-compose up -d
 ```
-Step 2: Starting The Server
-```bash
-bin/zookeeper-server-start.sh config/zookeeper.properties
-```
-on Windows platforms use bin\windows\instead of bin, and change the script extension to .bat.
-```bash
-bin/kafka-server-start.sh config/server.properties
-```
-Windows users should again use bin\windows\ directory to run the server.
-
-If the Kafka server runs without any error as well, we are ready to create a Spring Boot project.
-
 
 ## Installing the application
 
