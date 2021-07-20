@@ -49,7 +49,7 @@ java -jar -Dspring.profiles.active=player2 target/demo-0.0.1-SNAPSHOT.jar
 
 ## Play the Game (You can start the game with any player)
 Player1 port - 9000
-Player1 port - 9001
+Player2 port - 9001
 
 http://localhost:9000/start?number=22222222
 
@@ -60,4 +60,5 @@ http://localhost:9000/start                     -> to start with some random num
 
 ## Note
 When the other player is not available, game will resume after the player is available again
+
 Result will be displayed in Logs for both player1 and player2
