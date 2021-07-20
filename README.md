@@ -35,6 +35,7 @@ java -jar -Dspring.profiles.active=player2 target/demo-0.0.1-SNAPSHOT.jar
 
 
 ## Play the Game (You can start the game with any player)
+From browser hit below url.
 Player1 port - 9000
 Player2 port - 9001
 
