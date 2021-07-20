@@ -15,7 +15,7 @@ docker-compose up -d
 
 ## Installing the application
 
-Compile
+Compile (Skip the step if you dont want to compile, simply run the jar from target)
 
 ```bash
 mvn clean install     (or simply run the jar file from the target)   
