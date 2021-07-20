@@ -18,7 +18,7 @@ docker-compose up -d
 Compile
 
 ```bash
-mvn clean install
+mvn clean install     (or simply run the jar file from the target)   
 ```
 
 Run player 1
